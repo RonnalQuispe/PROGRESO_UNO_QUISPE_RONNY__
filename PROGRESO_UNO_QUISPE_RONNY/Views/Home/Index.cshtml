@@ -1,8 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pagina Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">HOTEL</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Fondo de imagen para el cuerpo entero */
+        body {
+            background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2a/04/a4/exterior.jpg?w=1200&h=-1&s=1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para el encabezado */
+        h1 {
+            color: #FFFF03;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo de la sección de información */
+        p {
+            color: #FFFFFF;
+            font-size: 18px;
+            backdrop-filter: blur(4px);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">HOTEL</h1>
+        <p>Descubre la experiencia única que nuestro <strong>Hotel</strong> tiene para ofrecerte. Disfruta de cómodas instalaciones, atención personalizada y servicios de alta calidad para que tu estadía sea inolvidable.</p>
+    </div>
+</body>
+</html>
