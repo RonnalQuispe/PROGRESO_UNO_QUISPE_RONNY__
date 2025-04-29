@@ -53,7 +53,7 @@ namespace PROGRESO_UNO_QUISPE_RONNY.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClienteId,Nombre,Saldo,FechaRegistro,Telefono,Direccion")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("ClienteId,IDcliente,Saldo,FechaRegistro,Telefono,Direccion")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
