@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace PROGRESO_UNO_QUISPE_RONNY.Models
 {
     public class Cliente
