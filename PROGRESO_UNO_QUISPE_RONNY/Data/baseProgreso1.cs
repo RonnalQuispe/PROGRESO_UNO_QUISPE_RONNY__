@@ -13,4 +13,8 @@ using PROGRESO_UNO_QUISPE_RONNY.Models;
         }
 
         public DbSet<PROGRESO_UNO_QUISPE_RONNY.Models.Cliente> Cliente { get; set; } = default!;
+
+public DbSet<PROGRESO_UNO_QUISPE_RONNY.Models.Reservacs> Reservacs { get; set; } = default!;
+
+public DbSet<PROGRESO_UNO_QUISPE_RONNY.Models.RecompensaCliente> RecompensaCliente { get; set; } = default!;
     }
