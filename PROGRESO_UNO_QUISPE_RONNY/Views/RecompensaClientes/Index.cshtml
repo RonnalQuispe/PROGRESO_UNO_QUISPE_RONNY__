@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<PROGRESO_UNO_QUISPE_RONNY.Models.RecompensaCliente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "RECOMPENSA CLIENTES";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-dark">Crear Nuevo</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -28,26 +29,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PuntosAcumulados)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente.Nombre)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.RecompensaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.RecompensaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.RecompensaId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PuntosAcumulados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.RecompensaId" class="btn btn-outline-success">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.RecompensaId" class="btn btn-outline-warning">Detalles</a>
+                    <a asp-action="Delete" asp-route-id="@item.RecompensaId" class="btn btn-outline-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

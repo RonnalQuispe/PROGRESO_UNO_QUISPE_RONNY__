@@ -10,33 +10,41 @@
     <h4>RecompensaCliente</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.FechaInicio)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.FechaInicio)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.PuntosAcumulados)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.PuntosAcumulados)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Cliente)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Cliente.Nombre)
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.RecompensaId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-outline-primary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked>
+        <a asp-action="Edit" asp-route-id="@Model?.RecompensaId" class="text-white">Editar</a>
+    </label>
+    <label class="btn btn-outline-primary">
+        <input type="radio" name="options" id="option2" autocomplete="off">
+        <a asp-action="Index" class="text-white">Volver a la Lista</a>
+    </label>
 </div>
