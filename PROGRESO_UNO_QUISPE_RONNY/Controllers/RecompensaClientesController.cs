@@ -90,9 +90,9 @@ namespace PROGRESO_UNO_QUISPE_RONNY.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("RecompensaId,Nombre,FechaInicio,PuntosAcumulados,ClienteId")] RecompensaCliente recompensaCliente)
+        public async Task<IActionResult> Edit(int id, [Bind("RecompensaId,Nombre,FechaInicio,PuntosAcumulados,ClienteId")] RecompensaCliente RecompensaCliente)
         {
-            if (id != recompensaCliente.RecompensaId)
+            if (id != RecompensaCliente.RecompensaId)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace PROGRESO_UNO_QUISPE_RONNY.Controllers
             {
                 try
                 {
-                    _context.Update(recompensaCliente);
+                    _context.Update(RecompensaCliente);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RecompensaClienteExists(recompensaCliente.RecompensaId))
+                    if (!RecompensaClienteExists(RecompensaCliente.RecompensaId))
                     {
                         return NotFound();
                     }
@@ -117,8 +117,8 @@ namespace PROGRESO_UNO_QUISPE_RONNY.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "Nombre", recompensaCliente.ClienteId);
-            return View(recompensaCliente);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "Nombre", RecompensaCliente.ClienteId);
+            return View(RecompensaCliente);
         }
 
         // GET: RecompensaClientes/Delete/5
